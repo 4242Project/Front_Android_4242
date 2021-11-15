@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.jakebreen:android-sendgrid:1.2.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/745194b1c0d459a75b202d233876d971/android-sendgrid-1.2.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/745194b1c0d459a75b202d233876d971/android-sendgrid-1.2.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/745194b1c0d459a75b202d233876d971/android-sendgrid-1.2.3/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jakebreen/android-sendgrid/1.2.3/eafd85856fb4b8214d9e6895f1f1a332cae81134/android-sendgrid-1.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
