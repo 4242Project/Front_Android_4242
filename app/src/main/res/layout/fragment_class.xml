@@ -17,70 +17,59 @@
                 android:id="@+id/recyclerView2"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/item_banner">
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <HorizontalScrollView
-                android:id="@+id/horizontalScrollView"
+
+            <View
+                android:id="@+id/view4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="#e7e7e7"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerView2">
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <include
-                        android:id="@+id/schedule_btn"
-                        layout="@layout/item_home_category"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view4"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_home_category"/>
 
-                    </include>
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerView"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        app:layout_constraintStart_toEndOf="@+id/schedule_btn"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:itemCount="5"
-                        tools:listitem="@layout/item_home_category">
-
-                    </androidx.recyclerview.widget.RecyclerView>
-
-                    <include
-                        android:id="@+id/another_category_btn"
-                        layout="@layout/item_home_category"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/recyclerView"
-                        app:layout_constraintTop_toTopOf="@id/recyclerView">
-
-                    </include>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </HorizontalScrollView>
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e7e7e7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerView"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="227dp" />
 
             <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/class_list_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+                app:layout_constraintTop_toBottomOf="@+id/view5">
 
             </androidx.fragment.app.FragmentContainerView>
 

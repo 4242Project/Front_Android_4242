@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/class_info_shape"
         android:layout_width="72dp"
         android:layout_height="72dp">
 
