@@ -8,7 +8,7 @@
         android:layout_height="wrap_content" >
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/stamp_img"
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -16,14 +16,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/stamp_subject"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-            app:layout_constraintStart_toStartOf="@+id/imageButton3"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+            android:text="카테고리"
+            app:layout_constraintEnd_toEndOf="@+id/stamp_img"
+            app:layout_constraintStart_toStartOf="@+id/stamp_img"
+            app:layout_constraintTop_toBottomOf="@+id/stamp_img" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,10 +8,10 @@
         android:layout_height="wrap_content" >
 
         <ImageView
-            android:id="@+id/imageButton3"
+            android:id="@+id/bannerImg"
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:background="@drawable/select_btn_shape"
+            android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
