@@ -71,7 +71,7 @@ class ClassFragment : Fragment() {
         categoryList.add(Category(R.drawable.ic_class_diy, "공예·만들기"))
         categoryList.add(Category(R.drawable.ic_class_e_sports, "E스포츠"))
         categoryList.add(Category(R.drawable.ic_class_it_program, "IT·프로그램"))
-        categoryList.add(Category(R.drawable.ic_class_talking, "회화"))
+        categoryList.add(Category(R.drawable.ic_class_category, "더보기"))
         categoryAdapter.setItems(categoryList)
     }
 

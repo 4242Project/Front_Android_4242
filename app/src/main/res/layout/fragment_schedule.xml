@@ -1,527 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ScheduleFragment">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ScheduleFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="묭묭님의 시간표"
-            android:fontFamily="@font/pretendard_semibold"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/button5"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_plus_circle"
-            android:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView2" />
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="1.0">
-
-            <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                app:columnCount="7"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:rowCount="9">
+                android:layout_height="match_parent">
 
-                <RadioButton
-                    android:layout_width="20dp"
+            <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="묭묭님의 시간표"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                    android:id="@+id/button5"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/schedule_week_selector"
-                    android:button="@null"
-                    android:gravity="center"
-                    android:text="월"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_plus_circle"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+            <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/monday"
+                    android:weightSum="7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/radioGroup"
+                    app:layout_constraintStart_toStartOf="@+id/schedule_cell_recyclerview"
+                    app:layout_constraintEnd_toEndOf="@+id/schedule_cell_recyclerview">
 
                 <RadioButton
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/schedule_week_selector"
-                    android:button="@null"
-                    android:gravity="center"
-                    android:text="화"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
+                        android:id="@+id/monday"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+
+                        android:background="@drawable/schedule_week_selector"
+                        android:textColor="@drawable/schedule_week_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:text="월" />
 
                 <RadioButton
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/schedule_week_selector"
-                    android:button="@null"
-                    android:gravity="center"
-                    android:text="수"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-
-                <RadioButton
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/schedule_week_selector"
-                    android:button="@null"
-                    android:gravity="center"
-                    android:text="목"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
+                        android:id="@+id/tuesday"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/schedule_week_selector"
+                        android:textColor="@drawable/schedule_week_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:text="화" />
 
                 <RadioButton
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/schedule_week_selector"
-                    android:button="@null"
-                    android:gravity="center"
-                    android:text="금"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <RadioButton
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/schedule_week_selector"
-                    android:button="@null"
-                    android:gravity="center"
-                    android:text="토"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
+                        android:id="@+id/wednesday"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/schedule_week_selector"
+                        android:textColor="@drawable/schedule_week_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:text="수" />
 
 
                 <RadioButton
-                    android:layout_width="20dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/schedule_week_selector"
-                    android:button="@null"
-                    android:gravity="center"
-                    android:text="일"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
+                        android:id="@+id/thursday"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/schedule_week_selector"
+                        android:textColor="@drawable/schedule_week_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:text="목" />
 
-                <TextView
+                <RadioButton
+                        android:id="@+id/friday"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/schedule_week_selector"
+                        android:textColor="@drawable/schedule_week_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:text="금" />
+
+                <RadioButton
+                        android:id="@+id/satureday"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/schedule_week_selector"
+                        android:textColor="@drawable/schedule_week_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:text="토" />
+
+                <RadioButton
+                        android:id="@+id/sunday"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/schedule_week_selector"
+                        android:textColor="@drawable/schedule_week_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:text="일"
+                        android:layout_marginEnd="8dp" />
+
+            </RadioGroup>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_date"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:itemCount="7"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/schedule_cell_recyclerview"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                    android:text="오늘의 일정"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/schedule_cell_recyclerview"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="24dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    tools:listitem="@layout/item_todo"
+                    app:spanCount="3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginRight="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/table_inside_background"
-                    android:gravity="center"
-                    android:text="@string/table"
-                    app:layout_columnWeight="1"
-                    app:layout_rowWeight="1" />
-
-
-            </androidx.gridlayout.widget.GridLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+    </androidx.core.widget.NestedScrollView>
 </layout>
