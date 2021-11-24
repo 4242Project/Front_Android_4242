@@ -3,10 +3,14 @@ package com.wanted.wantedproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
+import android.view.View
+import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.NavHostFragment
 import com.wanted.wantedproject.databinding.ActivityMainBinding
-import com.wanted.wantedproject.ui.home.ClassFragment
 import com.wanted.wantedproject.ui.home.MyStampFragment
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 import uk.co.jakebreen.sendgridandroid.SendGrid
 import uk.co.jakebreen.sendgridandroid.SendGridMail
 
@@ -21,24 +25,44 @@ class MainActivity : AppCompatActivity() {
            sendEmail()
        }*/
 
-        setOnClick()
+        setNavHomeFragment()
+        setUi()
     }
 
-    private fun setOnClick() {
-        binding.classNavBtn.setOnClickListener {
-            setNavHomeFragment(ClassFragment())
-        }
-        binding.classNavBtn.performClick()
+    private fun setNavHomeFragment() {
 
-        binding.myStampNavBtn.setOnClickListener {
-            setNavHomeFragment(MyStampFragment())
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
+        val navController = navHostFragment.navController
+
+         binding.mainToolbar.classNavBtn.setOnClickListener {
+             binding.mainToolbar.homeSearchBtn.visibility = View.VISIBLE
+             binding.mainToolbar.homeUserBtn.setImageResource(R.drawable.ic_user)
+             navController.navigate(R.id.action_global_classFragment)
+        }
+        binding.mainToolbar.classNavBtn.performClick()
+
+        binding.mainToolbar.myStampNavBtn.setOnClickListener {
+            binding.mainToolbar.homeSearchBtn.visibility = View.GONE
+            binding.mainToolbar.homeUserBtn.setImageResource(R.drawable.ic_settings)
+            navController.navigate(R.id.action_global_myStampFragment)
+        }
+        binding.mainToolbar.homeSearchBtn.setOnClickListener {
+            navController.navigate(R.id.action_global_searchClassFragment)
+        }
+        binding.mainToolbar.homeUserBtn.setOnClickListener {
+            navController.navigate(R.id.action_global_myPageFragment)
         }
     }
 
-    private fun setNavHomeFragment(fragment : Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, fragment)
-            .commit()
+    private fun setUi() {
+        val dataStore = SaiApplication.getInstance().getDataStore()
+        val toolBar = binding.mainToolbar
+
+        lifecycleScope.launch {
+            dataStore.toolbarModeFlow.collect {
+                toolBar.root.isVisible = it
+            }
+        }
     }
 
    private fun sendEmail() {

@@ -3,8 +3,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="stamp_guide_first">클래스를 수강할 때 마다 해당 카테고리의 도장이 쌓입니다. 클래스를 수강하며 나의 관심사가 무엇인지 확인해보세요!</string>
-    <string name="stamp_guide_second">수정 버튼을 클릭해 관심 카테고리를 수정할 수 있습니다. 수정시 홈 화면에서 보이는 카테고리 메뉴가 함께 변경됩니다.</string>
+    <string name="stamp_guide_first">·클래스를 수강할 때 마다 해당 카테고리의 도장이 쌓입니다. 클래스를 수강하며 나의 관심사가 무엇인지 확인해보세요!</string>
+    <string name="stamp_guide_second">·수정 버튼을 클릭해 관심 카테고리를 수정할 수 있습니다. 수정시 홈 화면에서 보이는 카테고리 메뉴가 함께 변경됩니다.</string>
     <string name="table">1</string>
     <string name="register_agree">[확인해주세요!]\n가입시 ‘42’의 다음 사항에 동의하는 것으로 간주합니다.</string>
+
+    <string name="category">카테고리</string>
+    <string name="baking">베이킹</string>
 </resources>

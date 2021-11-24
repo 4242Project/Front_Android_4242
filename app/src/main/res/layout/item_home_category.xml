@@ -9,13 +9,13 @@
         android:layout_height="wrap_content" >
 
         <ImageButton
-            android:id="@+id/category_btn"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@android:color/transparent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+                android:id="@+id/category_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/select_category_stroke"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
         </ImageButton>
 

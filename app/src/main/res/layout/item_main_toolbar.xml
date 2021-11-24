@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:checkedButton="@id/class_nav_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                    android:id="@+id/class_nav_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:background="@android:color/transparent"
+                    android:button="@null"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:layout_marginEnd="12dp"
+                    android:text="강의"
+                    android:textSize="20sp"
+                    android:textColor="@drawable/home_radio_selector"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                    android:id="@+id/myStamp_nav_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:button="@null"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="나의 도장"
+                    android:textSize="20sp"
+                    android:textColor="@drawable/home_radio_selector"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/button2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </RadioGroup>
+
+        <ImageButton
+                android:id="@+id/home_search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/home_user_btn"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_search" />
+
+        <ImageButton
+                android:id="@+id/home_user_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_user" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

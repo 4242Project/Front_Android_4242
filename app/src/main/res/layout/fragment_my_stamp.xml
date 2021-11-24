@@ -6,127 +6,149 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@color/app_main_color"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/textView27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="36dp"
-            android:text="묭묭님은"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView29"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" 요즘"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toEndOf="@+id/textView27"
-            app:layout_constraintTop_toTopOf="@+id/textView27" />
-
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="요리클래스"
-            android:textColor="@color/app_main_blue"
-            app:layout_constraintStart_toStartOf="@+id/textView27"
-            app:layout_constraintTop_toBottomOf="@+id/textView27" />
-
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="와 사이가 좋군요!"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toEndOf="@+id/textView30"
-            app:layout_constraintTop_toTopOf="@+id/textView30" />
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/mystamp_background"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView30">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/myStamp_recyclerview"
+                android:background="@color/app_main_color"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="24dp"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:spanCount="3"
-                tools:itemCount="11"
-                tools:listitem="@layout/item_stamp">
+                android:layout_height="wrap_content">
 
-            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="36dp"
+                    android:text="원티드님은"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 요즘"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/textView27"
+                    app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+            <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="베이킹클래스"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/app_main_blue"
+                    app:layout_constraintStart_toStartOf="@+id/textView27"
+                    app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="와 사이가 좋군요!"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/textView30"
+                    app:layout_constraintTop_toTopOf="@+id/textView30" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/mystamp_background"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView30"
+                    android:id="@+id/constraintLayout9">
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/myStamp_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="24dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:spanCount="3"
+                        tools:itemCount="11"
+                        tools:listitem="@layout/item_mystamp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F0F0F0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:text="나의 도장 안내"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="24dp"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="12sp"
+                        android:textColor="#939393"
+                        android:text="@string/stamp_guide_first"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+                <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:fontFamily="@font/pretendard_regular"
+                        android:textSize="12sp"
+                        android:textColor="#939393"
+                        android:text="@string/stamp_guide_second"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView32"
+                        app:layout_constraintTop_toBottomOf="@+id/textView33"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="8dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="152dp"
-            android:background="#F0F0F0"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:text="나의 도장 안내"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView33"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
-                android:text="@string/stamp_guide_first"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView32" />
-
-            <TextView
-                android:id="@+id/textView34"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:text="@string/stamp_guide_second"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView32"
-                app:layout_constraintTop_toBottomOf="@+id/textView33" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>
