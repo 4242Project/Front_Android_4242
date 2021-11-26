@@ -3,36 +3,58 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/baking_category_selector.xml" value="0.2593607305936073" />
+        <entry key="app/src/main/res/drawable/beauty_category_selector.xml" value="0.17314814814814813" />
+        <entry key="app/src/main/res/drawable/blue_btn_shape.xml" value="0.2593607305936073" />
+        <entry key="app/src/main/res/drawable/blue_select_btn_shape.xml" value="0.26296296296296295" />
+        <entry key="app/src/main/res/drawable/cooking_category_selector.xml" value="0.17314814814814813" />
+        <entry key="app/src/main/res/drawable/date_shape_drawable.xml" value="0.21851851851851853" />
+        <entry key="app/src/main/res/drawable/diy_category_selector.xml" value="0.17314814814814813" />
+        <entry key="app/src/main/res/drawable/esports_category_selector.xml" value="0.17314814814814813" />
         <entry key="app/src/main/res/drawable/ic_class_cooking.xml" value="0.2722222222222222" />
+        <entry key="app/src/main/res/drawable/it_category_selector.xml" value="0.17314814814814813" />
+        <entry key="app/src/main/res/drawable/musin_category_selector.xml" value="0.17314814814814813" />
+        <entry key="app/src/main/res/drawable/picture_category_selector.xml" value="0.17314814814814813" />
+        <entry key="app/src/main/res/drawable/progress_drawable.xml" value="0.21851851851851853" />
+        <entry key="app/src/main/res/drawable/radius_image_background.xml" value="0.24212962962962964" />
         <entry key="app/src/main/res/drawable/schedule_circle.xml" value="0.1265625" />
         <entry key="app/src/main/res/drawable/schedule_unselect_circle.xml" value="0.20185185185185187" />
         <entry key="app/src/main/res/drawable/schedule_week_selector.xml" value="0.2328125" />
         <entry key="app/src/main/res/drawable/searchbar_shape.xml" value="0.29128205128205126" />
         <entry key="app/src/main/res/drawable/select_btn_shape.xml" value="0.29128205128205126" />
         <entry key="app/src/main/res/drawable/select_category_stroke.xml" value="0.14739583333333334" />
+        <entry key="app/src/main/res/drawable/sports_category_selector.xml" value="0.17314814814814813" />
         <entry key="app/src/main/res/drawable/table_grey_background.xml" value="0.23796296296296296" />
         <entry key="app/src/main/res/drawable/table_inside_background.xml" value="0.28489583333333335" />
+        <entry key="app/src/main/res/drawable/talking_category_selector.xml" value="0.17314814814814813" />
+        <entry key="app/src/main/res/drawable/wine_category_selector.xml" value="0.17314814814814813" />
+        <entry key="app/src/main/res/drawable/yellow_btn_shape.xml" value="0.2593607305936073" />
         <entry key="app/src/main/res/drawable/yellow_circle_badge.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34610917537746805" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.29583333333333334" />
+        <entry key="app/src/main/res/layout/fragment_after_select_stamp.xml" value="0.24861111111111112" />
+        <entry key="app/src/main/res/layout/fragment_another_category_list.xml" value="0.27546296296296297" />
         <entry key="app/src/main/res/layout/fragment_another_class_list.xml" value="0.23333333333333334" />
         <entry key="app/src/main/res/layout/fragment_another_class_list2.xml" value="0.2625" />
         <entry key="app/src/main/res/layout/fragment_class.xml" value="0.2601851851851852" />
         <entry key="app/src/main/res/layout/fragment_class_application_list.xml" value="0.2953703703703704" />
         <entry key="app/src/main/res/layout/fragment_class_detail.xml" value="0.2452054794520548" />
+        <entry key="app/src/main/res/layout/fragment_class_detail_info.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_class_input_dialog.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/fragment_class_list.xml" value="0.2953703703703704" />
+        <entry key="app/src/main/res/layout/fragment_first_register.xml" value="0.2452054794520548" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14010416666666667" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.2452054794520548" />
         <entry key="app/src/main/res/layout/fragment_my_page.xml" value="0.24443379063710646" />
         <entry key="app/src/main/res/layout/fragment_my_page_schedule.xml" value="0.34825080477316356" />
         <entry key="app/src/main/res/layout/fragment_my_stamp.xml" value="0.3185595567867036" />
         <entry key="app/src/main/res/layout/fragment_open_class.xml" value="0.13194444444444445" />
         <entry key="app/src/main/res/layout/fragment_schedule.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_search_class.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_select_stamp.xml" value="0.11666666666666667" />
+        <entry key="app/src/main/res/layout/fragment_select_stamp.xml" value="0.3375840256984469" />
         <entry key="app/src/main/res/layout/item_all_category.xml" value="0.24861111111111112" />
         <entry key="app/src/main/res/layout/item_class_info.xml" value="0.2675925925925926" />
-        <entry key="app/src/main/res/layout/item_class_list.xml" value="0.2675925925925926" />
+        <entry key="app/src/main/res/layout/item_class_list.xml" value="0.45" />
         <entry key="app/src/main/res/layout/item_class_student.xml" value="0.2675925925925926" />
         <entry key="app/src/main/res/layout/item_date.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/item_home_category.xml" value="0.2675925925925926" />

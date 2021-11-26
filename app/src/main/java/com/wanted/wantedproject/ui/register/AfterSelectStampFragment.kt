@@ -5,56 +5,48 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.wanted.wantedproject.R
+import com.wanted.wantedproject.data.StampCategory
+import com.wanted.wantedproject.databinding.FragmentAfterSelectStampBinding
+import com.wanted.wantedproject.databinding.FragmentSelectStampBinding
+import com.wanted.wantedproject.ui.register.adapter.AfterSelectStampAdapter
+import com.wanted.wantedproject.ui.register.adapter.SelectStampAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AfterSelectStampFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AfterSelectStampFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding : FragmentAfterSelectStampBinding
+    private val adapter = AfterSelectStampAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_after_select_stamp, container, false)
+        binding = DataBindingUtil.inflate(layoutInflater,R.layout.fragment_after_select_stamp, container, false)
+
+        categoryRecyclerViewAdapter()
+        setAdapterItem()
+        setNavigation()
+
+        return binding.root
+    }
+    private fun categoryRecyclerViewAdapter() {
+        binding.selectStampRecyclerview.adapter = adapter
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AfterSelectStampFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AfterSelectStampFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun setAdapterItem() {
+        val categoryItem = arrayListOf<StampCategory>()
+        categoryItem.add(StampCategory(R.drawable.ic_class_baking, "베이킹",R.drawable.ic_class_baking_grey))
+        categoryItem.add(StampCategory(R.drawable.ic_class_sports, "스포츠",R.drawable.ic_class_sports_grey))
+        categoryItem.add(StampCategory(R.drawable.ic_class_it_program, "IT·프로그램",R.drawable.ic_class_it_program_grey))
+        categoryItem.add(StampCategory(R.drawable.ic_class_diy, "공예·만들기",R.drawable.ic_class_diy_grey))
+        categoryItem.add(StampCategory(R.drawable.ic_class_beauty_fashion, "뷰티·패션",R.drawable.ic_class_beauty_fashion_grey))
+        adapter.setItems(categoryItem)
+    }
+
+    private fun setNavigation() {
+        binding.startBtn.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_global_classFragment)
+        }
     }
 }

@@ -1,23 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.schoolclass.ClassApplicationListFragment">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.schoolclass.ClassApplicationListFragment">
+
+    <data>
+
+        <variable
+                name="subject"
+                type="String" />
+
+        <variable
+                name="nickname"
+                type="String" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <include
-            android:id="@+id/include6"
-            layout="@layout/item_toolbar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+                android:id="@+id/include6"
+                layout="@layout/item_toolbar"
+                app:title="@{@string/application_list}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
         </include>
 
-        <androidx.recyclerview.widget.RecyclerView
+        <include
+                layout="@layout/item_class_student"
+                app:layout_constraintTop_toBottomOf="@+id/include6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
+                app:subject ="@{@string/sub_1}"
+                app:nickname="@{@string/nick_1}"
+                android:layout_height="72dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/student_1">
+
+        </include>
+
+
+        <include
+                layout="@layout/item_class_student"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                app:subject ="@{@string/sub_2}"
+                app:nickname="@{@string/nick_2}"
+                app:layout_constraintTop_toBottomOf="@+id/student_1"
+                android:id="@+id/student_2">
+
+        </include>
+
+        <include
+                android:id="@+id/student_3"
+                layout="@layout/item_class_student"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                app:subject ="@{@string/sub_3}"
+                app:nickname="@{@string/nick_3}"
+                app:layout_constraintTop_toBottomOf="@+id/student_2">
+
+        </include>
+
+        <!--<androidx.recyclerview.widget.RecyclerView
             android:layout_width="409dp"
             android:layout_height="673dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -25,7 +78,7 @@
             tools:itemCount="5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include6" />
+            app:layout_constraintTop_toBottomOf="@+id/include6" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
