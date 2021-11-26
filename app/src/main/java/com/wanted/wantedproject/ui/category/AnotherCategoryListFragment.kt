@@ -52,7 +52,7 @@ class AnotherCategoryListFragment : Fragment() {
         categoryItem.add(Category(R.drawable.ic_class_sports, "스포츠"))
         categoryItem.add(Category(R.drawable.ic_class_it_program, "IT·프로그램"))
         categoryItem.add(Category(R.drawable.ic_class_diy, "공예·만들기"))
-        categoryItem.add(Category(R.drawable.ic_class_baking, "뷰티·패션"))
+        categoryItem.add(Category(R.drawable.ic_class_beauty_fashion, "뷰티·패션"))
         categoryItem.add(Category(R.drawable.ic_class_cooking, "요리"))
         categoryItem.add(Category(R.drawable.ic_class_talking, "회화"))
         categoryItem.add(Category(R.drawable.ic_class_picture, "사진"))

@@ -8,6 +8,24 @@
     <string name="table">1</string>
     <string name="register_agree">[확인해주세요!]\n가입시 ‘42’의 다음 사항에 동의하는 것으로 간주합니다.</string>
 
+    <string name="application_list">신청자 목록</string>
     <string name="category">카테고리</string>
     <string name="baking">베이킹</string>
+
+    <string name="dep">하린카페</string>
+    <string name="box">준비물 제공</string>
+    <string name="people">최대 6명</string>
+    <string name="time">11/16, 15시</string>
+    <string name="class_text">안녕하세요! 저는 식품영양학과 뚜지입니다 :)\n저는 동아리 쿠키팟에서 활동하면서 초코쿠키를 꾸준히 만들어 왔는데요,
+        저희가 직접 연구한 초코쿠키 레시피를 전수하고자 클래스를 열게 되었어요!\n\n\n클래스는 쿠키팟 팀원들과 함께 진행하게 됩니다!\n많은 관심 부탁드려요~</string>
+    <string name="teacher">식품영양학과 뚜지입니다 :) 동아리 쿠키팟에서 2년째 활동중이며, 주로 베이킹 클래스를 개설할 예정입니다.\n인스타 계정에서 제 베이킹 클래스 구경 해주세요~!</string>
+
+    <string name="sub_1">태권도학과</string>
+    <string name="sub_2">컴퓨터공학과</string>
+    <string name="sub_3">식품영양학과</string>
+
+    <string name="nick_1">우디</string>
+    <string name="nick_2">라이언</string>
+    <string name="nick_3">원티드</string>
+
 </resources>

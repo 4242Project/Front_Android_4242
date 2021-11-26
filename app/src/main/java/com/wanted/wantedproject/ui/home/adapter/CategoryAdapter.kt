@@ -6,6 +6,7 @@ import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.view.FrameMetrics
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
@@ -25,6 +26,15 @@ import com.wanted.wantedproject.ui.home.ClassFragment
 class CategoryAdapter() : RecyclerView.Adapter<CategoryAdapter.CategoryListViewHolder>() {
     private var categoryItem = ArrayList<Category>()
 
+    interface ItemClickListener{
+        fun onClick(view: View, position: Int)
+    }
+    //를릭 리스너
+    private lateinit var itemClickListener: ItemClickListener
+    fun setItemClickListener(itemClickListener: ItemClickListener) {
+        this.itemClickListener = itemClickListener
+    }
+
     fun setItems(item : ArrayList<Category>) {
         categoryItem = item
         notifyDataSetChanged()
@@ -35,18 +45,8 @@ class CategoryAdapter() : RecyclerView.Adapter<CategoryAdapter.CategoryListViewH
             binding.categoryBtn.setImageResource(item.categoryImg)
             binding.categoryText.text = item.categorySubject
 
-            itemView.setOnClickListener {
-                //setStroke()
-                if(index == 6)
-                    Navigation.findNavController(binding.root).navigate(R.id.action_classFragment_to_anotherClassListFragment)
-            }
         }
 
-
-        private fun setStroke() {
-            val drawable : GradientDrawable = binding.categoryBtn.background as GradientDrawable
-            drawable.setStroke(16, Color.parseColor("#ff5d15"))
-        }
 
         private fun unCheckButton() {
             val button = binding.categoryBtn
@@ -68,6 +68,10 @@ class CategoryAdapter() : RecyclerView.Adapter<CategoryAdapter.CategoryListViewH
 
     override fun onBindViewHolder(holder: CategoryListViewHolder, position: Int) {
         holder.bind(categoryItem[position], position)
+
+        holder.itemView.setOnClickListener {
+            itemClickListener.onClick(it,position)
+        }
 
     }
 

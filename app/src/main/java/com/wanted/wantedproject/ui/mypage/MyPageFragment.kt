@@ -32,6 +32,7 @@ class MyPageFragment : Fragment() {
     }
 
     private fun changeTabEvent(){
+        replaceTabFragment(MyPageScheduleFragment())
         binding.mypageTab.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when(tab!!.position) {

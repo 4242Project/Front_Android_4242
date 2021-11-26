@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-        app:startDestination="@id/classFragment">
+        app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/classFragment"
@@ -60,5 +60,31 @@
             android:id="@+id/anotherClassListFragment"
             android:name="com.wanted.wantedproject.ui.category.AnotherClassListFragment"
             android:label="fragment_another_class_list"
-            tools:layout="@layout/fragment_another_class_list" />
+            tools:layout="@layout/fragment_another_class_list" >
+        <action
+                android:id="@+id/action_anotherClassListFragment_to_classDetailFragment"
+                app:destination="@id/classDetailFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.wanted.wantedproject.ui.login.LoginFragment"
+            android:label="LoginFragment" >
+        <action
+                android:id="@+id/action_loginFragment_to_selectStampFragment"
+                app:destination="@id/selectStampFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/selectStampFragment"
+            android:name="com.wanted.wantedproject.ui.register.SelectStampFragment"
+            android:label="fragment_select_stamp"
+            tools:layout="@layout/fragment_select_stamp" >
+        <action
+                android:id="@+id/action_selectStampFragment_to_afterSelectStampFragment"
+                app:destination="@id/afterSelectStampFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/afterSelectStampFragment"
+            android:name="com.wanted.wantedproject.ui.register.AfterSelectStampFragment"
+            android:label="fragment_after_select_stamp"
+            tools:layout="@layout/fragment_after_select_stamp" /><action android:id="@+id/action_global_loginFragment" app:destination="@id/loginFragment"/>
 </navigation>

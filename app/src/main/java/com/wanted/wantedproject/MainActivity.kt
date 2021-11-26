@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
            sendEmail()
        }*/
 
+
         setNavHomeFragment()
         setUi()
     }
@@ -34,12 +35,14 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_container) as NavHostFragment
         val navController = navHostFragment.navController
 
+        navController.navigate(R.id.action_global_loginFragment)
+
          binding.mainToolbar.classNavBtn.setOnClickListener {
              binding.mainToolbar.homeSearchBtn.visibility = View.VISIBLE
              binding.mainToolbar.homeUserBtn.setImageResource(R.drawable.ic_user)
              navController.navigate(R.id.action_global_classFragment)
         }
-        binding.mainToolbar.classNavBtn.performClick()
+        //binding.mainToolbar.classNavBtn.performClick()
 
         binding.mainToolbar.myStampNavBtn.setOnClickListener {
             binding.mainToolbar.homeSearchBtn.visibility = View.GONE

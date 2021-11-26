@@ -19,6 +19,7 @@ import com.wanted.wantedproject.databinding.FragmentClassBinding
 import com.wanted.wantedproject.ui.home.adapter.BannerAdapter
 import com.wanted.wantedproject.ui.home.adapter.CategoryAdapter
 import com.wanted.wantedproject.ui.category.ScheduleFragment
+import com.wanted.wantedproject.ui.home.category.ClassListFragment
 import kotlinx.coroutines.launch
 
 class ClassFragment : Fragment() {
@@ -45,6 +46,7 @@ class ClassFragment : Fragment() {
         setCategoryAdapter()
         getBannerItem()
         getCategoryItem()
+        changeFragment()
 
         return binding.root
     }
@@ -85,9 +87,26 @@ class ClassFragment : Fragment() {
         categoryAdapter.setItems(categoryList)
     }
 
-     fun changeFragment(position : Int) {
-        val navHostFragment = childFragmentManager.findFragmentById(R.id.class_list_container) as NavHostFragment
-        val navController = navHostFragment.navController
+     fun changeFragment() {
+         categoryAdapter.setItemClickListener(object :CategoryAdapter.ItemClickListener{
+             override fun onClick(view: View, position: Int) {
+                 when(position) {
+                    0 -> {
+                        childFragmentManager.beginTransaction()
+                            .replace(R.id.class_list_container, ScheduleFragment())
+                            .commit()
+                    }
+                     1 -> {
+                         childFragmentManager.beginTransaction().replace(R.id.class_list_container, ClassListFragment()).commit()
+                     }
+                 }
+
+
+             }
+
+         })
     }
+
+
 
 }

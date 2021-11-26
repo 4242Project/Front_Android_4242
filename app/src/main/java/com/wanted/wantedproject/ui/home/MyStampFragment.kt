@@ -6,10 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.wanted.wantedproject.R
+import com.wanted.wantedproject.SaiApplication
 import com.wanted.wantedproject.data.StampInfo
 import com.wanted.wantedproject.databinding.FragmentMyStampBinding
 import com.wanted.wantedproject.ui.home.adapter.MyStampAdapter
+import kotlinx.coroutines.launch
 import timber.log.Timber
 
 class MyStampFragment : Fragment() {
@@ -20,6 +23,10 @@ class MyStampFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_my_stamp, container, false)
+
+        lifecycleScope.launch {
+            SaiApplication.getInstance().getDataStore().setToolbarVisibility(true)
+        }
 
         myStampRecyclerViewAdapter()
         setRecyclerViewItem()

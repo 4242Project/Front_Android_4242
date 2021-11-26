@@ -5,6 +5,12 @@ data class Category(
     var categorySubject : String
 )
 
+data class StampCategory(
+    var categoryImg : Int,
+    var categorySubject : String,
+    var imgName : Int
+)
+
 data class MyStamp(
     var categorySubject : String
 )
