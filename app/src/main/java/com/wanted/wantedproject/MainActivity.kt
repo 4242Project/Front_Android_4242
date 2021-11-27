@@ -42,8 +42,7 @@ class MainActivity : AppCompatActivity() {
              binding.mainToolbar.homeUserBtn.setImageResource(R.drawable.ic_user)
              navController.navigate(R.id.action_global_classFragment)
         }
-        //binding.mainToolbar.classNavBtn.performClick()
-
+        
         binding.mainToolbar.myStampNavBtn.setOnClickListener {
             binding.mainToolbar.homeSearchBtn.visibility = View.GONE
             binding.mainToolbar.homeUserBtn.setImageResource(R.drawable.ic_settings)
