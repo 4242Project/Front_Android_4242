@@ -7,18 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
-import android.widget.RadioGroup
-import androidx.core.view.marginTop
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.wanted.wantedproject.R
 import com.wanted.wantedproject.data.MyClass
-import com.wanted.wantedproject.data.Week
 import com.wanted.wantedproject.databinding.FragmentScheduleBinding
-import com.wanted.wantedproject.ui.category.adapter.ScheduleAdapter
-import com.wanted.wantedproject.ui.category.adapter.TodoAdapter
+import com.wanted.wantedproject.adapter.TodoAdapter
 
 class ScheduleFragment : Fragment() {
     private lateinit var binding : FragmentScheduleBinding

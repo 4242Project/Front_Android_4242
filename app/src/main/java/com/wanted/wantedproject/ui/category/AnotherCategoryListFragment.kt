@@ -12,8 +12,7 @@ import com.wanted.wantedproject.R
 import com.wanted.wantedproject.SaiApplication
 import com.wanted.wantedproject.data.Category
 import com.wanted.wantedproject.databinding.FragmentAnotherCategoryListBinding
-import com.wanted.wantedproject.databinding.FragmentAnotherClassListBinding
-import com.wanted.wantedproject.ui.category.adapter.AnotherCategoryAdapter
+import com.wanted.wantedproject.adapter.AnotherCategoryAdapter
 import kotlinx.coroutines.launch
 
 class AnotherCategoryListFragment : Fragment() {

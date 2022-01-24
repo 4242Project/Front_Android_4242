@@ -13,6 +13,11 @@
                       <LayoutPositions />
                     </value>
                   </entry>
+                  <entry key="action_global_loginFragment">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
                   <entry key="action_global_myPageFragment">
                     <value>
                       <LayoutPositions />
@@ -33,8 +38,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="338" />
-                            <option name="y" value="-860" />
+                            <option name="x" value="414" />
+                            <option name="y" value="-1074" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -69,6 +74,15 @@
                             <option name="x" value="436" />
                             <option name="y" value="-475" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_anotherClassListFragment_to_classDetailFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -132,6 +146,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="firstRegisterFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="241" />
+                            <option name="y" value="-781" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="loginFragment">
                     <value>
                       <LayoutPositions>
@@ -143,6 +169,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_loginFragment_to_firstRegisterFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_loginFragment_to_selectStampFragment">
                               <value>
                                 <LayoutPositions />
@@ -189,13 +220,25 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="secondRegisterFragment2">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="426" />
+                            <option name="y" value="-769" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="selectStampFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="166" />
-                            <option name="y" value="-860" />
+                            <option name="x" value="242" />
+                            <option name="y" value="-1074" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -206,6 +249,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="thirdRegisterFragment2">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="601" />
+                            <option name="y" value="-779" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

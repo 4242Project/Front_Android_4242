@@ -1,7 +1,5 @@
 package com.wanted.wantedproject.ui.home
 
-import android.graphics.Color
-import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,15 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.wanted.wantedproject.R
 import com.wanted.wantedproject.SaiApplication
 import com.wanted.wantedproject.data.Banner
 import com.wanted.wantedproject.data.Category
 import com.wanted.wantedproject.databinding.FragmentClassBinding
-import com.wanted.wantedproject.ui.home.adapter.BannerAdapter
-import com.wanted.wantedproject.ui.home.adapter.CategoryAdapter
+import com.wanted.wantedproject.adapter.BannerAdapter
+import com.wanted.wantedproject.adapter.CategoryAdapter
 import com.wanted.wantedproject.ui.category.ScheduleFragment
 import com.wanted.wantedproject.ui.home.category.ClassListFragment
 import kotlinx.coroutines.launch
@@ -88,7 +85,7 @@ class ClassFragment : Fragment() {
     }
 
      fun changeFragment() {
-         categoryAdapter.setItemClickListener(object :CategoryAdapter.ItemClickListener{
+         categoryAdapter.setItemClickListener(object : CategoryAdapter.ItemClickListener{
              override fun onClick(view: View, position: Int) {
                  when(position) {
                     0 -> {

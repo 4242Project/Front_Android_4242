@@ -11,9 +11,8 @@ import com.wanted.wantedproject.R
 import com.wanted.wantedproject.SaiApplication
 import com.wanted.wantedproject.data.StampInfo
 import com.wanted.wantedproject.databinding.FragmentMyStampBinding
-import com.wanted.wantedproject.ui.home.adapter.MyStampAdapter
+import com.wanted.wantedproject.adapter.MyStampAdapter
 import kotlinx.coroutines.launch
-import timber.log.Timber
 
 class MyStampFragment : Fragment() {
     private lateinit var binding : FragmentMyStampBinding

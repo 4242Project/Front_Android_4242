@@ -7,10 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.wanted.wantedproject.R
+import com.wanted.wantedproject.adapter.MyClassAdapter
 import com.wanted.wantedproject.data.MyClass
-import com.wanted.wantedproject.data.StampInfo
 import com.wanted.wantedproject.databinding.FragmentMyPageScheduleBinding
-import com.wanted.wantedproject.ui.home.adapter.MyStampAdapter
 
 class MyPageScheduleFragment : Fragment() {
 

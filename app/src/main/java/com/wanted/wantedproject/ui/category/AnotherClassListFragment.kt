@@ -11,7 +11,7 @@ import com.wanted.wantedproject.R
 import com.wanted.wantedproject.api.SaiRetrofit
 import com.wanted.wantedproject.data.HobbyClass
 import com.wanted.wantedproject.databinding.FragmentAnotherClassListBinding
-import com.wanted.wantedproject.ui.category.adapter.AnotherClassAdapter
+import com.wanted.wantedproject.adapter.AnotherClassAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

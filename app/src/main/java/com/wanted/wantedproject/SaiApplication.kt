@@ -1,6 +1,7 @@
 package com.wanted.wantedproject
 
 import android.app.Application
+import com.wanted.wantedproject.repository.SettingRepository
 import timber.log.Timber
 
 class SaiApplication : Application() {

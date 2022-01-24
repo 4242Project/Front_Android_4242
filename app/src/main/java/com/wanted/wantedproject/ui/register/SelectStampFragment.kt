@@ -6,16 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import com.wanted.wantedproject.R
-import com.wanted.wantedproject.data.Category
 import com.wanted.wantedproject.data.StampCategory
 import com.wanted.wantedproject.databinding.FragmentSelectStampBinding
-import com.wanted.wantedproject.ui.category.adapter.AnotherCategoryAdapter
-import com.wanted.wantedproject.ui.register.adapter.SelectStampAdapter
+import com.wanted.wantedproject.adapter.SelectStampAdapter
 
 class SelectStampFragment : Fragment() {
     private lateinit var binding : FragmentSelectStampBinding

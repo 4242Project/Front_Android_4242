@@ -10,9 +10,7 @@ import androidx.navigation.Navigation
 import com.wanted.wantedproject.R
 import com.wanted.wantedproject.data.StampCategory
 import com.wanted.wantedproject.databinding.FragmentAfterSelectStampBinding
-import com.wanted.wantedproject.databinding.FragmentSelectStampBinding
-import com.wanted.wantedproject.ui.register.adapter.AfterSelectStampAdapter
-import com.wanted.wantedproject.ui.register.adapter.SelectStampAdapter
+import com.wanted.wantedproject.adapter.AfterSelectStampAdapter
 
 class AfterSelectStampFragment : Fragment() {
     private lateinit var binding : FragmentAfterSelectStampBinding

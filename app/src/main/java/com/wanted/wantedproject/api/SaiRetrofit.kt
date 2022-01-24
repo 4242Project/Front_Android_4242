@@ -1,6 +1,6 @@
 package com.wanted.wantedproject.api
 
-import com.wanted.wantedproject.Constants
+import com.wanted.wantedproject.utilities.Constants
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory

@@ -72,6 +72,9 @@
         <action
                 android:id="@+id/action_loginFragment_to_selectStampFragment"
                 app:destination="@id/selectStampFragment" />
+        <action
+                android:id="@+id/action_loginFragment_to_firstRegisterFragment"
+                app:destination="@id/firstRegisterFragment" />
     </fragment>
     <fragment
             android:id="@+id/selectStampFragment"
@@ -87,4 +90,25 @@
             android:name="com.wanted.wantedproject.ui.register.AfterSelectStampFragment"
             android:label="fragment_after_select_stamp"
             tools:layout="@layout/fragment_after_select_stamp" /><action android:id="@+id/action_global_loginFragment" app:destination="@id/loginFragment"/>
+    <fragment
+            android:id="@+id/firstRegisterFragment"
+            android:name="com.wanted.wantedproject.ui.register.FirstRegisterFragment"
+            android:label="fragment_second_register"
+            tools:layout="@layout/fragment_second_register" >
+        <action
+                android:id="@+id/action_firstRegisterFragment_to_secondRegisterFragment2"
+                app:destination="@id/secondRegisterFragment2" />
+    </fragment>
+    <fragment
+            android:id="@+id/secondRegisterFragment2"
+            android:name="com.wanted.wantedproject.ui.register.SecondRegisterFragment"
+            android:label="SecondRegisterFragment" >
+        <action
+                android:id="@+id/action_secondRegisterFragment2_to_thirdRegisterFragment2"
+                app:destination="@id/thirdRegisterFragment2" />
+    </fragment>
+    <fragment
+            android:id="@+id/thirdRegisterFragment2"
+            android:name="com.wanted.wantedproject.ui.register.ThirdRegisterFragment"
+            android:label="ThirdRegisterFragment" />
 </navigation>
