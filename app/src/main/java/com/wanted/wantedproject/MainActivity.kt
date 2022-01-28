@@ -11,6 +11,7 @@ import com.wanted.wantedproject.databinding.ActivityMainBinding
 import com.wanted.wantedproject.ui.home.MyStampFragment
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import uk.co.jakebreen.sendgridandroid.SendGrid
 import uk.co.jakebreen.sendgridandroid.SendGridMail
 
@@ -66,23 +67,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
-   private fun sendEmail() {
-       val sendgrid = SendGrid.create("APIKEY")
-       val email = SendGridMail()
-
-       email.addRecipient("email", "name")
-       email.setFrom("email", "name")
-       email.setSubject("text")
-       email.setContent("context")
-
-       val response = sendgrid.send(email)
-
-       if(response.call().isSuccessful)
-           Log.d("send message", "success")
-       else
-           Log.d("send error", response.call().errorMessage)
-
-       }
 
 }
